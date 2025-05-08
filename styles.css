@@ -9,6 +9,8 @@ html {
     height: 100%;
     font-family: "Raleway", sans-serif;
     color: white;
+    overflow: hidden;
+    overscroll-behavior: none;
 }
 
 .container {
