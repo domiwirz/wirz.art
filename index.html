@@ -5,75 +5,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Studio Wirz</title>
-    <script>
-        // Content for both languages
-        const content = {
-            en: {
-                services: {
-                    line1: "Renovations.",
-                    line2: "Your Space.",
-                    line3: "Reimagined."
-                },
-                scheduleButton: "Schedule a meeting"
-            },
-            de: {
-                services: {
-                    line1: "Renovationen.",
-                    line2: "Ihr Raum.",
-                    line3: "Neu gedacht."
-                },
-                scheduleButton: "Termin vereinbaren"
-            }
-        };
-
-        // Detect browser language
-        const userLang = navigator.language || navigator.userLanguage;
-        const lang = userLang.toLowerCase().startsWith('de') ? 'de' : 'en';
-        document.documentElement.lang = lang;
-
-        // Function to set content when DOM is loaded
-        document.addEventListener('DOMContentLoaded', () => {
-            const selectedContent = content[lang];
-            
-            // Set services content
-            document.getElementById('services-text').innerHTML = `
-                ${selectedContent.services.line1}<br>
-                ${selectedContent.services.line2}<br>
-                ${selectedContent.services.line3}
-            `;
-            
-            // Set schedule button text
-            document.getElementById('schedule-button').textContent = selectedContent.scheduleButton;
-        });
-    </script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
         integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
-    <style>
-        /* Hide both language versions initially */
-        .text-en, .text-de {
-            display: none;
-        }
-        /* Show the active language */
-        html.lang-en .text-en,
-        html.lang-de .text-de {
-            display: block;
-        }
-    </style>
+    <script src="script.js"></script>
 </head>
 
 <body>
     <div class="container">
         <div class="background-image"></div>
+        <div class="grid-overlay"></div>
         <div class="title">
-            <span class="title-large">Studio</span>
-            <span class="title-large">Wirz</span>
+            <span class="title-studio">Studio</span>
+            <span class="title-wirz">Wirz</span>
         </div>
         
         <div class="services">
